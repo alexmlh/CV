@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CV_Oleksandr_Malahan_EN</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    html, body {
+      background-color: #f3f4f6;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #1f2937;
+      font-size: 9.2pt;
+      line-height: 1.44;
+    }
+    .cv-page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 20px auto;
+      background: #ffffff;
+      padding: 14mm 13mm;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+      border-radius: 4px;
+      display: grid;
+      grid-template-columns: 54mm minmax(0, 1fr);
+      gap: 8mm;
+      align-items: stretch;
+    }
+    a {
+      color: #1b5b96;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .header {
+      border-bottom: 2px solid #0f2b48;
+      padding: 0 0 9px;
+      margin-bottom: 12px;
+    }
+    .name {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 25pt;
+      font-weight: 400;
+      color: #1f2937;
+      margin: 0 0 5px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+    .title {
+      display: inline-block;
+      padding: 5px 8px;
+      background: #f3f4f6;
+      color: #1f2937;
+      font-size: 8.4pt;
+      font-weight: 600;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+    }
+    .photo-box {
+      width: calc(100% + 19mm);
+      aspect-ratio: 1;
+      margin: -21mm 0 22px -15.5mm;
+    }
+    .photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 0;
+      border: 0;
+      display: block;
+    }
+    .sidebar {
+      min-width: 0;
+      position: relative;
+      isolation: isolate;
+      padding: 7mm 3.5mm 7mm 2.5mm;
+      color: #1f2937;
+      font-size: 8.1pt;
+      overflow-wrap: anywhere;
+    }
+    .sidebar::before {
+      position: absolute;
+      z-index: -1;
+      inset: -14mm 0;
+      left: -13mm;
+      width: calc(100% + 13mm);
+      background: #f3f4f6;
+      content: "";
+    }
+    .sidebar h2 {
+      margin-top: 11px;
+      color: #1f2937;
+      border-bottom-color: #9ca3af;
+      font-size: 9pt;
+      letter-spacing: 1px;
+    }
+    .sidebar li strong,
+    .sidebar .label {
+      color: #1f2937;
+    }
+    .sidebar td.val {
+      color: #1f2937 !important;
+    }
+    .sidebar-contact {
+      display: grid;
+      gap: 7px;
+      font-size: 8.1pt;
+      line-height: 1.4;
+    }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+    }
+    .contact-icon {
+      width: 14px;
+      height: 14px;
+      flex: 0 0 14px;
+      margin-top: 2px;
+      color: #1f2937;
+    }
+    .contact-item > div {
+      min-width: 0;
+    }
+    .sidebar-contact strong {
+      display: block;
+      color: #1f2937;
+      font-size: 7.4pt;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .sidebar-list {
+      margin: 3px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .sidebar-list li {
+      margin-bottom: 5px;
+      font-size: 8.1pt;
+      text-align: left;
+    }
+    .sidebar-skills {
+      margin-top: 2px !important;
+    }
+    .sidebar-skills tr {
+      display: block;
+      padding: 4px 0;
+      border-bottom: 1px solid #d1d5db;
+    }
+    .sidebar-skills td.label,
+    .sidebar-skills td.val {
+      display: block;
+      width: 100% !important;
+      font-size: 8pt !important;
+    }
+    .sidebar-skills td.label {
+      margin-bottom: 2px;
+      color: #1f2937 !important;
+    }
+    .main-content {
+      min-width: 0;
+    }
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 10.2pt;
+      font-weight: 700;
+      color: #1f2937;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #1b5b96;
+      padding-bottom: 4px;
+      margin: 12px 0 6px;
+    }
+    .summary-text {
+      text-align: left;
+      margin: 0 0 6px 0;
+      font-size: 9.0pt;
+      line-height: 1.4;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: 9.2pt;
+      color: #1f2937;
+      margin-top: 6px;
+    }
+    .item-header > span:last-child:not(.proj-links) {
+      flex-shrink: 0;
+      margin-left: 8px;
+      white-space: nowrap;
+    }
+    .item-meta {
+      font-size: 8.8pt;
+      color: #1f2937;
+      margin-bottom: 4px;
+    }
+    ul {
+      margin: 2px 0 6px 16px;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 3px;
+      text-align: left;
+      font-size: 9.0pt;
+    }
+    li strong {
+      color: #1f2937;
+    }
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 3px;
+    }
+    table.data-table td {
+      padding: 3px 0;
+      vertical-align: top;
+      font-size: 9.0pt;
+    }
+    table.data-table td.label {
+      width: 25%;
+      font-weight: 700;
+      color: #1f2937;
+    }
+    table.data-table td.val {
+      width: 75%;
+      color: #1f2937;
+    }
+    .proj-links {
+      margin-left: 6px;
+      font-weight: normal;
+      font-size: 8.8pt;
+    }
+    .proj-links a,
+    .proj-links strong {
+      font-weight: 400;
+    }
+    body > .pdf-download {
+      width: 210mm;
+      margin: 10px auto -16px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 12px;
+      font-size: 8.8pt;
+    }
+
+    @media print {
+      html, body {
+        background: #ffffff !important;
+      }
+      a {
+        color: #0f2b48 !important;
+        text-decoration: none !important;
+      }
+      body > .pdf-download {
+        display: none !important;
+      }
+      .cv-page {
+        width: 210mm !important;
+        min-height: 297mm !important;
+        margin: 0 !important;
+        padding: 12mm 15mm !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        grid-template-columns: 54mm minmax(0, 1fr);
+        gap: 7mm;
+      }
+      .sidebar {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      .sidebar::before {
+        inset-block: -12mm;
+        left: -15mm;
+        width: calc(100% + 15mm);
+      }
+      .photo-box {
+        width: calc(100% + 21mm);
+        margin-top: -19mm;
+        margin-left: -17.5mm;
+        margin-right: -3.5mm;
+      }
+      .page-2 {
+        break-before: page;
+        padding-top: 12mm !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="pdf-download">
+    <a href="cv_oleksandr_malahan_en.pdf" download>Download PDF</a>
+    <span class="language-toggle"><a href="cv_oleksandr_malahan_de.html" lang="de">DE</a> | <strong>EN</strong></span>
+  </div>
+
+  <div class="cv-page page-1">
+    <aside class="sidebar">
+      <h2>Personal</h2>
+      <div class="sidebar-contact">
+        
+        
+        
+        <div class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.02H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54c0 .96.79 1.73 1.77 1.73h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+          <div><a href="https://www.linkedin.com/in/oleksandr-malahan-554563198/" target="_blank" rel="noopener noreferrer">linkedin.com/in/oleksandr-malahan</a></div>
+        </div>
+        <div class="contact-item">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.77-.24.77-.54v-2.1c-3.14.68-3.8-1.33-3.8-1.33-.5-1.3-1.26-1.65-1.26-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 .1.76 1.99 3.22 1.5.1-.73.4-1.22.72-1.5-2.5-.28-5.12-1.26-5.12-5.58 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.08 1.15a10.7 10.7 0 0 1 5.6 0c2.14-1.45 3.08-1.15 3.08-1.15.61 1.55.23 2.7.12 2.98.72.79 1.15 1.79 1.15 3.02 0 4.33-2.62 5.29-5.12 5.57.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.78.54A11.2 11.2 0 0 0 12 .8Z"/></svg>
+          <div><a href="https://github.com/alexmlh" target="_blank" rel="noopener noreferrer">github.com/alexmlh</a></div>
+        </div>
+        <div><strong>Status</strong>ZAB-recognised &bull; available immediately</div>
+      </div>
+      <h2>Languages</h2>
+      <ul class="sidebar-list">
+        <li><strong>German:</strong> B2, certified</li>
+        <li><strong>English:</strong> B2, fluent</li>
+        <li><strong>Ukrainian / Russian:</strong> native</li>
+        <li><strong>Spanish:</strong> B1</li>
+      </ul>
+      <h2>Key Subjects</h2>
+      <ul class="sidebar-list">
+        <li>Advanced mathematics and mathematical modelling</li>
+        <li>Computer science, discrete structures and algorithms</li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+    <header class="header">
+      <div class="name">Oleksandr Malahan</div>
+      <div class="title">Full-Stack Software Engineer / Web Engineer <br> Diploma in Mathematics and Computer Science (ZAB)</div>
+    </header>
+    <h2>Professional Profile</h2>
+    <p class="summary-text">
+      Results-driven <strong>Full-Stack Software Engineer</strong> with a <strong>Diploma in Mathematics and Computer Science</strong>,
+      recognised by the German Central Office for Foreign Education (ZAB) as a German higher education qualification at a level
+      between bachelor's and master's. Combines strong mathematical and algorithmic problem-solving skills with commercial
+      experience building web applications for high-traffic German e-commerce platforms, including
+      <a href="https://www.expert.de" target="_blank"><strong>expert.de</strong></a>.
+      Specialises in typed frontend and service architectures using <strong>TypeScript, Vue.js, Nuxt and Node.js</strong>,
+      robust RESTful APIs and modern AI-assisted development practices (Claude Code, GitHub Copilot).
+    </p>
+
+    <h2>Professional Experience</h2>
+
+    <div class="item-header">
+      <span>Full-Stack Software Developer</span>
+      <span>03/2026 – 07/2026</span>
+    </div>
+    <div class="item-meta">
+      Braintags GmbH &bull; Willich, Germany &bull; Platform: <a href="https://www.expert.de" target="_blank"><strong>expert.de</strong></a>
+    </div>
+    <ul>
+      <li><strong>E-commerce platform development (<a href="https://www.expert.de" target="_blank">expert.de</a>):</strong> Enhanced and maintained core components of a leading German electronics retail platform using <strong>Vue.js, Nuxt and TypeScript</strong>.</li>
+      <li><strong>Feature development:</strong> Designed and implemented business-critical full-stack features, including <a href="https://www.expert.de/gasttrainer-rudi" target="_blank"><strong>expert.de/gasttrainer-rudi</strong></a>, with a focus on performance, usability and responsive design.</li>
+      <li><strong>Backend and REST APIs:</strong> Integrated modular RESTful microservices, developed server-side endpoints in <strong>Node.js</strong> and structured data storage with <strong>MongoDB</strong>.</li>
+      <li><strong>AI product development (<a href="https://hypava.com" target="_blank">hypava.com</a>):</strong> Contributed to the architecture and frontend integration of AI-powered product components in an agile workflow.</li>
+      <li><strong>Quality and tooling:</strong> Used modern development and refactoring tools (Claude Code, GitHub Copilot, Git, Bitbucket, Jira) to improve code quality and delivery speed.</li>
+    </ul>
+
+    <div class="item-header" style="margin-top: 8px;">
+      <span>Mathematics and Computer Science Teacher</span>
+      <span>2004 – 2019</span>
+    </div>
+    <div class="item-meta">Secondary education &bull; Berdyansk, Ukraine</div>
+    <ul>
+      <li><strong>Algorithms and logic:</strong> Taught algorithmic thinking, data structures, discrete mathematics and structured programming fundamentals.</li>
+      <li><strong>Structured teaching:</strong> Designed practical learning materials and teaching methods to explain complex mathematical models and systems clearly.</li>
+      <li><strong>Mentoring:</strong> Guided students in computer science projects and prepared them for subject olympiads.</li>
+    </ul>
+
+    </main>
+  </div>
+
+  <div class="cv-page page-2">
+    <aside class="sidebar">
+      <h2>Technical Skills</h2>
+      <table class="data-table sidebar-skills">
+        <tr>
+          <td class="label">Frontend</td>
+          <td class="val">TypeScript, JavaScript, Vue 3, Nuxt 3, React, HTML5, CSS3, Tailwind CSS, daisyUI, Vite, SSR</td>
+        </tr>
+        <tr>
+          <td class="label">Backend and APIs</td>
+          <td class="val">Node.js, Express.js, RESTful APIs, MongoDB, Appwrite, JWT, session management</td>
+        </tr>
+        <tr>
+          <td class="label">Tools and practices</td>
+          <td class="val">Git, GitHub, Bitbucket, Postman, npm, Docker (fundamentals), CI/CD, Scrum, Kanban, Jira</td>
+        </tr>
+        <tr>
+          <td class="label">AI-assisted development</td>
+          <td class="val">Claude Code, GitHub Copilot, prompt engineering, tool calling, API integrations, automated test generation</td>
+        </tr>
+        <tr>
+          <td class="label">Methods</td>
+          <td class="val">Algorithm optimisation, data modelling, discrete mathematics, clean code, code reviews</td>
+        </tr>
+      </table>
+      <h2>Availability</h2>
+      <div class="sidebar-contact">
+        <div><strong>Location</strong>Ratingen, Germany</div>
+        <div><strong>Work location</strong>Düsseldorf and surrounding area</div>
+        <div><strong>Work model</strong>Home office, hybrid, or on-site</div>
+        <div><strong>Employment type</strong>Full-time or part-time</div>
+      </div>
+    </aside>
+    <main class="main-content">
+    <h2>Selected Development Projects</h2>
+
+    <div class="item-header">
+      <span>MERN Real-Time Chat Application</span>
+      <span class="proj-links">
+        <a href="https://github.com/alexmlh/fullstack-chat" target="_blank"><strong>[GitHub Repository]</strong></a> &bull;
+        <a href="https://fullstack-chat-qzjh.onrender.com" target="_blank"><strong>[Live Demo]</strong></a>
+      </span>
+    </div>
+    <div class="item-meta">Technologies: Node.js, Express, Socket.IO, MongoDB, React, Axios, JWT</div>
+    <ul>
+      <li>Built a responsive messaging platform with bidirectional real-time communication (WebSockets), secure sessions, token-based authentication and modern UI state management.</li>
+    </ul>
+
+    <div class="item-header" style="margin-top: 6px;">
+      <span>Full-Stack E-commerce Application (MERN)</span>
+      <span class="proj-links">
+        <a href="https://github.com/alexmlh/mern-store" target="_blank"><strong>[GitHub Repository]</strong></a> &bull;
+        <a href="https://mern-store-ezem.onrender.com" target="_blank"><strong>[Live Demo]</strong></a>
+      </span>
+    </div>
+    <div class="item-meta">Technologies: React.js, Node.js, Express, MongoDB, REST API, Tailwind CSS, daisyUI</div>
+    <ul>
+      <li>Designed and built a full-featured online store with product catalogues, a dynamic shopping cart, administrative management and a persistent REST backend.</li>
+    </ul>
+
+    <div class="item-header" style="margin-top: 6px;">
+      <span>React Movie Search and Discovery Platform</span>
+      <span class="proj-links">
+        <a href="https://github.com/alexmlh/react-movie" target="_blank"><strong>[GitHub Repository]</strong></a> &bull;
+        <a href="https://alexmlh.github.io/react-movie" target="_blank"><strong>[Live Demo]</strong></a>
+      </span>
+    </div>
+    <div class="item-meta">Technologies: React.js, Appwrite (BaaS), Tailwind CSS, REST APIs</div>
+    <ul>
+      <li>Built a responsive single-page application with asynchronous API data retrieval, search and filtering, usage metrics and backend-as-a-service integration.</li>
+    </ul>
+
+    <h2>Education and Recognition</h2>
+    <div class="item-header">
+      <span>Diploma in Mathematics and Computer Science</span>
+      <span>1999 – 2004</span>
+    </div>
+    <div class="item-meta">Berdyansk State Pedagogical University &bull; Final grade: 1.3 (German scale: very good)</div>
+    <ul>
+      <li><strong>Official ZAB recognition (Bonn):</strong> The assessment confirms a German higher education qualification at a level between bachelor's and master's, qualifying the holder for non-regulated academic professions in Germany.</li>
+    </ul>
+
+    <h2>Professional Development and Certificates</h2>
+    <table class="data-table">
+      <tr>
+        <td class="label" style="width: 15%;">2026:</td>
+        <td class="val" style="width: 85%;"><strong>Mastering Vue and Nuxt: Full Stack Unleashed</strong> &bull; Braintags GmbH / <a href="https://masteringnuxt.com" target="_blank">masteringnuxt.com</a></td>
+      </tr>
+      <tr>
+        <td class="label">2023 – 2024:</td>
+        <td class="val"><strong>The Modern JavaScript &amp; TypeScript Tutorial</strong> (advanced ES6+, asynchronous patterns, DOM and Node.js)</td>
+      </tr>
+      <tr>
+        <td class="label">2021 – 2022:</td>
+        <td class="val"><strong>The Complete Web Developer: Zero to Mastery</strong> (full-stack fundamentals, React, APIs, Node.js)</td>
+      </tr>
+    </table>
+
+    </main>
+  </div>
+
+</body>
+</html>
