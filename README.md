@@ -1,6 +1,6 @@
 # Oleksandr Malahan — CV
 
-Bilingual CV in German and English, available as public-safe HTML and PDF copies.
+Bilingual CV in German and English, available as HTML and PDF.
 
 ## Files
 
@@ -9,4 +9,4 @@ Bilingual CV in German and English, available as public-safe HTML and PDF copies
 | German | [Open CV](index.html) | [Download PDF](public/cv_oleksandr_malahan_de.pdf) |
 | English | [Open CV](public/cv_oleksandr_malahan_en.html) | [Download PDF](public/cv_oleksandr_malahan_en.pdf) |
 
-The public copies omit the street address, email address, phone number, and portrait. The original working files and source notes are kept separate and should not be uploaded to the public repository.
+The public HTML versions omit the street address, email address, and phone number. They display the portrait from `photo.jpg`; the downloadable PDFs do not include the portrait. Original working files and source notes are kept separate.
