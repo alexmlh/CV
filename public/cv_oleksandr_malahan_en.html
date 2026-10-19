@@ -256,6 +256,17 @@
       gap: 12px;
       font-size: 8.8pt;
     }
+    .pdf-download button {
+      border: 0;
+      padding: 0;
+      background: none;
+      color: #1b5b96;
+      font: inherit;
+      cursor: pointer;
+    }
+    .pdf-download button:hover {
+      text-decoration: underline;
+    }
 
     @media print {
       html, body {
@@ -303,7 +314,7 @@
 <body>
 
   <div class="pdf-download">
-    <a href="cv_oleksandr_malahan_en.pdf" download>Download PDF</a>
+    <button type="button" onclick="window.print()">Print / Save as PDF</button>
     <span class="language-toggle"><a href="../index.html" lang="de">DE</a> | <strong>EN</strong></span>
   </div>
 

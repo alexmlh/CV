@@ -44,9 +44,18 @@
       text-decoration: underline;
     }
     .header {
+      position: relative;
+      isolation: isolate;
       border-bottom: 2px solid #0f2b48;
       padding: 0 0 9px;
       margin-bottom: 12px;
+    }
+    .header::before {
+      position: absolute;
+      z-index: -1;
+      inset: -14mm -13mm 0 -8mm;
+      background: #f3f4f6;
+      content: "";
     }
     .name {
       font-family: Georgia, "Times New Roman", serif;
@@ -245,7 +254,7 @@
     }
     .proj-links a,
     .proj-links strong {
-      font-weight: 400;
+      font-weight: 500;
     }
     body > .pdf-download {
       width: 210mm;
@@ -255,6 +264,17 @@
       align-items: center;
       gap: 12px;
       font-size: 8.8pt;
+    }
+    .pdf-download button {
+      border: 0;
+      padding: 0;
+      background: none;
+      color: #1b5b96;
+      font: inherit;
+      cursor: pointer;
+    }
+    .pdf-download button:hover {
+      text-decoration: underline;
     }
 
     @media print {
@@ -287,6 +307,9 @@
         left: -15mm;
         width: calc(100% + 15mm);
       }
+      .header::before {
+        inset: -12mm -15mm 0 -7mm;
+      }
       .photo-box {
         width: calc(100% + 21mm);
         margin-top: -19mm;
@@ -303,7 +326,7 @@
 <body>
 
   <div class="pdf-download">
-    <a href="public/cv_oleksandr_malahan_de.pdf" download>PDF herunterladen</a>
+    <button type="button" onclick="window.print()">Drucken / als PDF speichern</button>
     <span class="language-toggle"><strong>DE</strong> | <a href="public/cv_oleksandr_malahan_en.html" lang="en">EN</a></span>
   </div>
 
