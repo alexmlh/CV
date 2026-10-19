@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CV_Oleksandr_Malahan_EN</title>
   <style>
     @page {
@@ -19,7 +20,7 @@
       padding: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       color: #1f2937;
-      font-size: 9.2pt;
+      font-size: 9.5pt;
       line-height: 1.44;
     }
     .cv-page {
@@ -44,9 +45,18 @@
       text-decoration: underline;
     }
     .header {
+      position: relative;
+      isolation: isolate;
       border-bottom: 2px solid #0f2b48;
       padding: 0 0 9px;
       margin-bottom: 12px;
+    }
+    .header::before {
+      position: absolute;
+      z-index: -1;
+      inset: -14mm -13mm 0 -8mm;
+      background: #f3f4f6;
+      content: "";
     }
     .name {
       font-family: Georgia, "Times New Roman", serif;
@@ -62,7 +72,7 @@
       padding: 5px 8px;
       background: #f3f4f6;
       color: #1f2937;
-      font-size: 8.4pt;
+      font-size: 8.8pt;
       font-weight: 600;
       letter-spacing: 1.1px;
       text-transform: uppercase;
@@ -87,7 +97,7 @@
       isolation: isolate;
       padding: 7mm 3.5mm 7mm 2.5mm;
       color: #1f2937;
-      font-size: 8.1pt;
+      font-size: 9.5pt;
       overflow-wrap: anywhere;
     }
     .sidebar::before {
@@ -103,7 +113,7 @@
       margin-top: 11px;
       color: #1f2937;
       border-bottom-color: #9ca3af;
-      font-size: 9pt;
+      font-size: 10.5pt;
       letter-spacing: 1px;
     }
     .sidebar li strong,
@@ -116,7 +126,7 @@
     .sidebar-contact {
       display: grid;
       gap: 7px;
-      font-size: 8.1pt;
+      font-size: 9.5pt;
       line-height: 1.4;
     }
     .contact-item {
@@ -137,7 +147,7 @@
     .sidebar-contact strong {
       display: block;
       color: #1f2937;
-      font-size: 7.4pt;
+      font-size: 9.5pt;
       letter-spacing: 0.5px;
       text-transform: uppercase;
     }
@@ -148,7 +158,7 @@
     }
     .sidebar-list li {
       margin-bottom: 5px;
-      font-size: 8.1pt;
+      font-size: 9.5pt;
       text-align: left;
     }
     .sidebar-skills {
@@ -163,7 +173,7 @@
     .sidebar-skills td.val {
       display: block;
       width: 100% !important;
-      font-size: 8pt !important;
+      font-size: 9.5pt !important;
     }
     .sidebar-skills td.label {
       margin-bottom: 2px;
@@ -174,7 +184,7 @@
     }
     h2 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 10.2pt;
+      font-size: 10.5pt;
       font-weight: 700;
       color: #1f2937;
       text-transform: uppercase;
@@ -186,14 +196,14 @@
     .summary-text {
       text-align: left;
       margin: 0 0 6px 0;
-      font-size: 9.0pt;
+      font-size: 9.5pt;
       line-height: 1.4;
     }
     .item-header {
       display: flex;
       justify-content: space-between;
       font-weight: 700;
-      font-size: 9.2pt;
+      font-size: 9.6pt;
       color: #1f2937;
       margin-top: 6px;
     }
@@ -203,7 +213,7 @@
       white-space: nowrap;
     }
     .item-meta {
-      font-size: 8.8pt;
+      font-size: 9.2pt;
       color: #1f2937;
       margin-bottom: 4px;
     }
@@ -214,7 +224,7 @@
     li {
       margin-bottom: 3px;
       text-align: left;
-      font-size: 9.0pt;
+      font-size: 9.5pt;
     }
     li strong {
       color: #1f2937;
@@ -227,7 +237,7 @@
     table.data-table td {
       padding: 3px 0;
       vertical-align: top;
-      font-size: 9.0pt;
+      font-size: 9.5pt;
     }
     table.data-table td.label {
       width: 25%;
@@ -241,7 +251,7 @@
     .proj-links {
       margin-left: 6px;
       font-weight: normal;
-      font-size: 8.8pt;
+      font-size: 9.2pt;
     }
     .proj-links a,
     .proj-links strong {
@@ -254,7 +264,7 @@
       justify-content: flex-end;
       align-items: center;
       gap: 12px;
-      font-size: 8.8pt;
+      font-size: 9.2pt;
     }
     .pdf-download button {
       border: 0;
@@ -267,6 +277,80 @@
     .pdf-download button:hover {
       text-decoration: underline;
     }
+    .site-footer {
+      width: 210mm;
+      margin: 0 auto 20px;
+      color: #6b7280;
+      font-size: 8.5pt;
+      text-align: center;
+    }
+    .summary-text,
+    .sidebar-list li,
+    .sidebar-skills td.val,
+    .main-content li,
+    .main-content .data-table td.val {
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    @media screen and (max-width: 760px) {
+      html, body {
+        font-size: 10pt;
+      }
+      body > .pdf-download,
+      .site-footer {
+        width: auto;
+        margin-left: 12px;
+        margin-right: 12px;
+      }
+      body > .pdf-download {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .cv-page {
+        width: auto;
+        min-height: 0;
+        margin: 12px;
+        padding: 18px;
+        border-radius: 4px;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+      }
+      .sidebar {
+        padding: 0;
+      }
+      .sidebar::before {
+        inset: -18px;
+        left: -18px;
+        width: calc(100% + 36px);
+      }
+      .photo-box {
+        width: min(100%, 240px);
+        margin: 0 auto 18px;
+      }
+      .header::before {
+        inset: -18px -18px 0;
+      }
+      .item-header {
+        flex-wrap: wrap;
+        gap: 2px 8px;
+      }
+      .item-header > span:last-child:not(.proj-links) {
+        margin-left: auto;
+      }
+      .proj-links {
+        width: 100%;
+        margin: 2px 0 0;
+      }
+      table.data-table tr,
+      table.data-table td {
+        display: block;
+        width: 100% !important;
+      }
+      table.data-table td {
+        padding: 2px 0;
+      }
+    }
 
     @media print {
       html, body {
@@ -277,6 +361,9 @@
         text-decoration: none !important;
       }
       body > .pdf-download {
+        display: none !important;
+      }
+      .site-footer {
         display: none !important;
       }
       .cv-page {
@@ -297,6 +384,9 @@
         inset-block: -12mm;
         left: -15mm;
         width: calc(100% + 15mm);
+      }
+      .header::before {
+        inset: -12mm -15mm 0 -7mm;
       }
       .photo-box {
         width: calc(100% + 21mm);
@@ -515,6 +605,8 @@
 
     </main>
   </div>
+
+  <footer class="site-footer">© 2026 Oleksandr Malahan</footer>
 
 </body>
 </html>
